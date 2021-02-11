@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Test</title>
+    </head>
+    <body>
+        <h1>DERET FIBONACI</h1>
+        Masukan angka :
+        <input type="number" id="inputAngka" placeholder="Input Jumlah" /><br /><br />
+        <input type="button" value="SHOW" onclick="showData()" />
+        <input type="button" value="GANJIL" onclick="" />
+        <input type="button" value="GENAP" onclick="" />
+
+        <h1>Result :</h1>
+        <h2 id="result"></h2>
+    </body>
+    <script>
+        let result;
+
+        const showData = () => {
+            var InputAngka = document.getElementById('inputAngka').value;
+            const fibo = (n) => {
+                let arr = [0, 1];
+
+                for (i = 2; i <= n; i++) {
+                    const a = arr[i - 1];
+                    const b = arr[i - 2];
+
+                    arr.push(a + b);
+
+                    if (arr[n] > n) {
+                        break;
+                    }
+                }
+                return arr;
+            };
+
+            result = '';
+            result += fibo(InputAngka);
+            document.getElementById('result').innerHTML = result;
+        };
+
+        const showGanjil = () => {};
+
+        const showGenap = () => {};
+    </script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 10px;
+            }
+            form {
+                width: 70%;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" id="nama" placeholder="username" />
+        <input type="email" id="email" placeholder="email" />
+        role
+        <select id="role"></select
+        ><br /><br />
+        <input type="button" value="ADDUSER" onclick="inputData()" />
+
+        <legend><h1>USER DATA</h1></legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="renderData"></tbody>
+        </table>
+    </body>
+    <script src="soal3.js"></script>
+</html>
